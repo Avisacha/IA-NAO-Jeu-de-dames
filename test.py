@@ -56,6 +56,10 @@ class Plateau:
 	tour = Tour.BLANC # Les blancs commencent
 	nbr_pions_blancs = 20
 	nbr_pions_noirs = 20
+	nbr_reines_blancs = 0
+	nbr_reines_noirs = 0
+	valeur_pion = 10
+	valeur_reine = 50
 	
 	obj = [[0 for x in range(10)] for y in range(10)] # 0,0 <=> en bas à gauche
 	
@@ -64,15 +68,16 @@ class Plateau:
 	# Évalution du score du point de vue de l'IA
 	def evaluation(self):
 		score = 0
-		
+
 		if(self.etat == Etat.GAGNE):
 			score += 1000 + (self.coups * 10) # Il faut gagner le plus rapidement possible
 		elif(self.etat == Etat.PERDU):
 			score -= 1000 - (self.coups * 10) # Si la défaite est inévitable, il faut perdre le plus lentement
 		else:
 			score -= self.coups * 10
-	
-	
+
+		score += ((self.nbr_pions_blancs * self.valeur_pion + self.nbr_reines_blancs * self.valeur_reine) - (self.nbr_pions_noirs * self.valeur_pion + self.nbr_reines_noirs * self.valeur_reine)) * (self.coups * 10)
+		
 		return score
 	
 	def listerLesCoupsPossibles(self, pdv):
