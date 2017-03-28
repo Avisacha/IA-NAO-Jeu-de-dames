@@ -32,6 +32,10 @@ def owner(case):
 		return Tour.NOIR
 	else
 		return Tour.AUCUN
+		
+class Coup:
+	coup_suivant = None
+	pdv = Tour.AUCUN
 	
 class Plateau:
 	coups = 0
@@ -49,13 +53,14 @@ class Plateau:
 		return 0
 	
 	def listerLesCoupsPossibles(self, pdv):
+		coups = []
 		for i in range(0, 10):
 			for j in range(0, 10):
-				if(owner(obj[i][j] == pdv):
-					
-				
+				if(owner(obj[i][j]) == pdv):
+					coups += makeMoves(i, j, pdv)
 	
-class Coup:
+	def makeMoves(self, i, j, pdv):
+		
 	
 
 
