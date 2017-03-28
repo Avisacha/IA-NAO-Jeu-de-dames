@@ -46,10 +46,11 @@ class Plateau:
 	def evaluation(self):
 		return 0
 	
-	def listerLesCoupsPossibles(self):
+	def listerLesCoupsPossibles(self, pdv):
 		for i in range(0, 10):
 			for j in range(0, 10):
-				
+				if(owner(obj[i][j] == pdv):
+					
 				
 	
 class Coup:
