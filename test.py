@@ -59,7 +59,7 @@ class Plateau:
 		else:
 			score -= self.coups * 10
 
-		score += (10 * self.nbr_pions_blancs) - (self.nbr_pions_noirs * 10);
+		score += ((10 * self.nbr_pions_blancs) - (self.nbr_pions_noirs * 10)) * (self.coups * 10);
 
 	
 		return score
