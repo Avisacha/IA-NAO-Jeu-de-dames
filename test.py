@@ -37,6 +37,8 @@ class Plateau:
 	coups = 0
 	etat = Etat.AUCUN
 	tour = Tour.BLANC # Les blancs commencent
+	nbr_pions_blancs = 20
+	nbr_pions_noirs = 20
 	
 	obj = [[0 for x in range(10)] for y in range(10)] 
 	
