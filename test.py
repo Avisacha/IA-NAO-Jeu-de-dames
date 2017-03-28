@@ -12,11 +12,18 @@ class Case(Enum):
 	DAME_NOIRE = 4
 	
 class Plateau:
+	coups = 0
+	obj = [[0 for x in range(10)] for y in range(10)] 
+	
 	def __init__(self):
 		
 	
+class Coup:
+	
+	
 Plateau = [[0 for x in range(10)] for y in range(10)] 
 
+# Évalution du score du point de vue de l'IA
 del evalution(plateau):
 	return 0
 
