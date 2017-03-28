@@ -4,6 +4,8 @@ import copy
 # http://stackoverflow.com/questions/36932/how-can-i-represent-an-enum-in-python
 # pip install enum34
 
+# Fin de partie égale
+
 class Case(Enum):
 	VIDE = 0
 	PION_BLANC = 1
@@ -15,6 +17,7 @@ class Etat(Enum):
 	AUCUN = 0
 	GAGNE = 1
 	PERDU = 2
+	EGALITE = 3
 	
 class Plateau:
 	coups = 0
@@ -25,9 +28,11 @@ class Plateau:
 	def __init__(self):
 		
 	# Évalution du score du point de vue de l'IA
-	def evalution(self):
+	def evaluation(self):
 		return 0
 	
+	def listerLesCoupsPossibles(self):
+		
 	
 	
 class Coup:
