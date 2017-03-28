@@ -20,11 +20,9 @@ class Plateau:
 	
 class Coup:
 	
-	
-Plateau = [[0 for x in range(10)] for y in range(10)] 
 
 # Évalution du score du point de vue de l'IA
-del evalution(plateau):
+def evalution(plateau):
 	return 0
 
 tts = ALProxy("ALTextToSpeech", "127.0.0.1", 50766)
