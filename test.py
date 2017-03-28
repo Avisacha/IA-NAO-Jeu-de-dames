@@ -58,7 +58,9 @@ class Plateau:
 			score -= 1000 - (self.coups * 10) # Si la défaite est inévitable, il faut perdre le plus lentement
 		else:
 			score -= self.coups * 10
-	
+
+		score += (10 * self.nbr_pions_blancs) - (self.nbr_pions_noirs * 10);
+
 	
 		return score
 	
