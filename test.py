@@ -19,9 +19,24 @@ class Etat(Enum):
 	PERDU = 2
 	EGALITE = 3
 	
+# L'IA est toujours les blancs
+class Tour(Enum):
+	BLANC = 0
+	NOIR = 1
+	AUCUN = 2
+	
+def owner(case):
+	if Case.PION_BLANC == case or Case.DAME_BLANCHE == case:
+		return Tour.BLANC
+	elif Case.PION_NOIR == case or Case.DAME_NOIRE == case:
+		return Tour.NOIR
+	else
+		return Tour.AUCUN
+	
 class Plateau:
 	coups = 0
 	etat = Etat.AUCUN
+	tour = Tour.BLANC # Les blancs commencent
 	
 	obj = [[0 for x in range(10)] for y in range(10)] 
 	
@@ -32,8 +47,10 @@ class Plateau:
 		return 0
 	
 	def listerLesCoupsPossibles(self):
-		
-	
+		for i in range(0, 10):
+			for j in range(0, 10):
+				
+				
 	
 class Coup:
 	
