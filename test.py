@@ -50,7 +50,17 @@ class Plateau:
 		
 	# Évalution du score du point de vue de l'IA
 	def evaluation(self):
-		return 0
+		score = 0
+		
+		if(self.etat == Etat.GAGNE):
+			score += 1000 + (self.coups * 10) # Il faut gagner le plus rapidement possible
+		elif(self.etat == Etat.PERDU):
+			score -= 1000 - (self.coups * 10) # Si la défaite est inévitable, il faut perdre le plus lentement
+		else:
+			score -= self.coups * 10
+	
+	
+		return score
 	
 	def listerLesCoupsPossibles(self, pdv):
 		coups = []
@@ -60,7 +70,9 @@ class Plateau:
 					coups += makeMoves(i, j, pdv)
 	
 	def makeMoves(self, i, j, pdv):
-		
+		liste = []
+		if(i - 1 > 0 and ):
+			
 	
 
 
