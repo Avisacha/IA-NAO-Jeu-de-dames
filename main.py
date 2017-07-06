@@ -6,6 +6,8 @@ import copy
 
 # Fin de partie égale
 
+# TODO : validation d'un coup, interfaçage avec le NAO, simulation des coups possibles avec une profondeur max
+
 class Case(Enum):
 	VIDE = 0
 	PION_BLANC = 1
